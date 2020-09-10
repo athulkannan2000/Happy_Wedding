@@ -1,0 +1,42 @@
+{% extends 'adam/Main.html' %}
+{% load static %}
+{% block content %}
+
+<h2>Chat Messages</h2>
+
+<div class="container">
+  
+  <p>
+  {% for post in post %}
+    <img src="{% static '/images/test.png' %}" alt="Girl in a jacket" width="50" height="50">
+    <div class="container">
+      <h4>{{ post.title }}</h4>
+      <p>{{ post.body }}</p>
+      <p>{{ post.date }}</p>
+    </div><br>
+  {% endfor %}
+</p>
+  <span class="time-right">11:00</span>
+</div>
+
+<!---
+<div class="container darker">
+  <img src="{% static '/images/test.png' %}" class="right" style="width:60px;">
+  <p>Hey! I'm fine. Thanks for asking!</p>
+  <span class="time-left">11:01</span>
+</div>
+
+<div class="container">
+  <img src="{% static '/images/test.png' %}" alt="Avatar" style="width:60px;">
+  <p>Sweet! So, what do you wanna do today?</p>
+  <span class="time-right">11:02</span>
+</div>
+
+<div class="container darker">
+  <img src="{% static '/images/test.png' %}" alt="Avatar" class="right" style="width:100%;">
+  <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+  <span class="time-left">11:05</span>
+</div>
+--->
+
+{% endblock content %}
